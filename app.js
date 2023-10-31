@@ -6,6 +6,9 @@ app.listen(3030, () => {
     console.log('Servidor en ejecucion');
 });
 
+
+app.use(express.static('./DH-HEROES/public'));
+
 app.get('/', function(req, res){
     res.sendFile(path.resolve(__dirname, './DH-HEROES/views/index.html'));
 });
